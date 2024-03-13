@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 connectDB();
 
-const PORT = 3500;
+// const PORT = 3500;
 
 app.get("/", (req, res) => {
   res.send("hello ");
@@ -32,7 +32,7 @@ app.use("/api/wishlist", wishlistRouter);
 
 mongoose.connection.once("open", () => {
   console.log("connected to DB");
-  app.listen(process.env.PORT || PORT, () => {
+  app.listen(process.env.PORT || 3000, () => {
     console.log("server is running");
   });
 });
