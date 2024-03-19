@@ -19,7 +19,7 @@ connectDB();
 // const PORT = 3500;
 
 app.get("/", (req, res) => {
-  res.send("hello ");
+  res.send("Website still in development :( ");
 });
 
 app.use("/api/hoteldata", hotelDataAddedToDBRouter);
